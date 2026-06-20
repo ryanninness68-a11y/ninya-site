@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Consulting — Ninya | No Blueprint Required</title>
+<meta name="description" content="I don't advise on AI. I build it inside your actual tools and stay in it with you until it works.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0D150E;--bg-2:#111A12;--bg-card:#162018;--bg-section:#0A1208;
+  --ember:#C0392B;--harvest:#D4622A;--gold:#E8841A;
+  --parch:#F5EFE0;--sand:#E8D5B7;--mesa:#A0522D;--bark:#6B3A2A;
+  --sage:#8B9E76;--sage-dim:#4A6B42;--tan:#C9B896;
+  --text:#F5EFE0;--text-mid:#C8B89A;--text-dim:#7A6A58;--text-muted:#4A3A2A;
+  --border:rgba(107,58,42,.18);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.source{font-family:'Source Serif 4',Georgia,serif}
+.eyebrow{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--harvest);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:68px;background:rgba(8,13,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(107,58,42,.12);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:21px;font-weight:900;color:var(--parch);letter-spacing:-.3px;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .25s;}
+.nav-links a:hover,.nav-links a.active{color:var(--parch)}
+.nav-cta{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--harvest);color:var(--parch);padding:11px 26px;border:none;cursor:pointer;text-decoration:none;transition:background .25s;}
+.nav-cta:hover{background:var(--ember)}
+.btn-primary{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:var(--harvest);color:var(--parch);padding:15px 34px;text-decoration:none;border:none;cursor:pointer;transition:background .25s;display:inline-block;}
+.btn-primary:hover{background:var(--ember)}
+footer{background:rgba(5,8,6,.98);padding:56px 56px 36px;border-top:1px solid var(--border);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:52px;}
+.footer-logo{display:flex;align-items:center;gap:9px;margin-bottom:14px;text-decoration:none;}
+.footer-logo-text{font-family:'Playfair Display',serif;font-size:19px;font-weight:900;color:var(--parch);}
+.footer-tagline{font-family:'Source Serif 4',serif;font-size:13px;font-style:italic;color:var(--text-dim);line-height:1.7;}
+.footer-col-label{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;display:block;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-family:'Source Serif 4',serif;font-size:14px;color:var(--text-dim);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--parch)}
+.footer-quote{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--text-muted);line-height:1.6;}
+.footer-quote strong{display:block;font-style:normal;color:var(--harvest);font-size:13px;margin-top:6px;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border);flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:12px;color:var(--text-muted);font-family:'DM Sans',sans-serif;}
+@media(max-width:900px){
+  nav{padding:0 24px}.nav-links{display:none}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+
+.cons-hero{
+  padding:140px 56px 72px;
+  border-bottom:1px solid var(--border);
+}
+.cons-hero-eyebrow{margin-bottom:16px;display:block;}
+.cons-hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(38px,5.5vw,68px);
+  font-weight:900;line-height:1.05;
+  color:var(--parch);margin-bottom:20px;
+  letter-spacing:-.03em;max-width:760px;
+}
+.cons-hero-title em{font-style:italic;color:var(--harvest);}
+.cons-hero-sub{
+  font-family:'Source Serif 4',serif;
+  font-size:18px;
+  color:var(--text-mid);max-width:600px;line-height:1.7;margin-bottom:32px;
+}
+.cons-section{padding:64px 56px;border-bottom:1px solid var(--border);}
+.cons-section-label{display:block;margin-bottom:14px;}
+.cons-section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(26px,3.2vw,38px);font-weight:900;
+  color:var(--parch);line-height:1.2;margin-bottom:36px;max-width:600px;
+}
+.cons-section-title em{font-style:italic;color:var(--harvest);}
+.discovery-note{
+  font-family:'Source Serif 4',serif;font-size:15px;font-style:italic;
+  color:var(--text-mid);text-align:center;margin-bottom:36px;max-width:520px;
+  margin-left:auto;margin-right:auto;line-height:1.7;
+}
+.tier-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:3px;
+}
+.tier-card{
+  background:var(--bg-card);
+  padding:36px 32px;
+  border-top:3px solid var(--harvest);
+}
+.tier-card.tier-engine{border-top-color:var(--gold);}
+.tier-card.tier-full{border-top-color:var(--mesa);}
+.tier-card.tier-retainer{border-top-color:var(--tan);}
+.tier-label{
+  font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--harvest);display:block;margin-bottom:14px;
+}
+.tier-engine .tier-label{color:var(--gold);}
+.tier-full .tier-label{color:var(--mesa);}
+.tier-retainer .tier-label{color:var(--tan);}
+.tier-price{
+  font-family:'Playfair Display',serif;font-size:32px;font-weight:900;
+  color:var(--parch);margin-bottom:14px;
+}
+.tier-price span{font-size:14px;color:var(--text-dim);font-family:'DM Sans',sans-serif;font-weight:400;}
+.tier-desc{
+  font-family:'Source Serif 4',serif;font-size:14px;color:var(--text-dim);
+  line-height:1.8;
+}
+.tier-fine{
+  font-family:'DM Sans',sans-serif;font-size:10.5px;color:var(--text-muted);
+  line-height:1.5;margin-top:10px;
+}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;}
+.how-num{
+  font-family:'Playfair Display',serif;font-size:42px;font-weight:900;
+  color:var(--harvest);opacity:.5;margin-bottom:8px;
+}
+.how-title{
+  font-size:17px;font-weight:700;color:var(--parch);margin-bottom:10px;
+}
+.how-body{
+  font-family:'Source Serif 4',serif;font-size:14px;color:var(--text-dim);
+  line-height:1.8;
+}
+.cons-cta{
+  margin:64px 56px;
+  background:var(--bg-card);
+  padding:64px 72px;
+  border-top:3px solid var(--ember);
+  text-align:center;
+}
+.cta-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(26px,3vw,38px);font-weight:900;
+  color:var(--parch);line-height:1.15;margin-bottom:14px;
+}
+.cta-title em{font-style:italic;color:var(--harvest);}
+.cta-body{
+  font-family:'Source Serif 4',serif;
+  font-size:15px;color:var(--text-dim);line-height:1.9;
+  max-width:480px;margin:0 auto 28px;
+}
+.cta-note{
+  font-size:11px;color:var(--text-muted);
+  font-family:'DM Sans',sans-serif;margin-top:16px;
+}
+@media(max-width:900px){
+  .cons-hero,.cons-section,.cons-cta{padding-left:24px;padding-right:24px;}
+  .tier-grid{grid-template-columns:1fr;}
+  .how-grid{grid-template-columns:1fr;gap:32px;}
+  .cons-cta{margin:32px 24px;padding:40px 32px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg width="28" height="34" viewBox="0 0 88 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="lg2n" cx="50%" cy="42%" r="58%"><stop offset="0%" stop-color="#E07018"/><stop offset="35%" stop-color="#C03020"/><stop offset="80%" stop-color="#801A10"/><stop offset="100%" stop-color="#4A0E08"/></radialGradient>
+        <radialGradient id="fg2n" cx="50%" cy="72%" r="52%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="18%" stop-color="#FFE840"/><stop offset="45%" stop-color="#F07020"/><stop offset="75%" stop-color="#C02820"/><stop offset="100%" stop-color="#C02820" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path d="M 44 88 Q 43 82, 42 78 C 36 76, 30 78, 24 75 C 20 73, 18 69, 20 66 C 22 63, 26 62, 30 63 C 26 60, 20 58, 18 53 C 16 48, 19 43, 23 42 C 20 40, 15 36, 17 31 C 19 26, 25 26, 29 28 C 27 25, 25 20, 27 16 C 29 12, 34 12, 37 15 C 36 11, 36 6, 39 3 C 41 1, 44 2, 44 5 C 44 2, 47 1, 49 3 C 52 6, 52 11, 51 15 C 54 12, 59 12, 61 16 C 63 20, 61 25, 59 28 C 63 26, 69 26, 71 31 C 73 36, 68 40, 65 42 C 69 43, 72 48, 70 53 C 68 58, 62 60, 58 63 C 62 62, 66 63, 68 66 C 70 69, 68 73, 64 75 C 58 78, 52 76, 46 78 Q 45 82, 44 88 Z" fill="url(#lg2n)" stroke="#1A0804" stroke-width="1"/>
+      <path d="M44 88 Q44 93 43 100" stroke="#6A2A10" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <ellipse cx="44" cy="44" rx="19" ry="26" fill="url(#fg2n)" opacity="1"/>
+      <path d="M44 68 C38 56 32 42 36 26 C38 18 41 13 44 10 C47 13 50 18 52 26 C56 42 50 56 44 68Z" fill="#F07020" opacity=".82"/>
+      <path d="M44 38 C43 30 42 22 43 16 C43.5 13 44 11 44 10 C44 11 44.5 13 45 16 C46 22 45 30 44 38Z" fill="#FFFFFF" opacity=".65"/>
+    </svg>
+    <span class="nav-logo-text">Ninya</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="consulting.html" class="active">Consulting</a></li>
+    <li><a href="index.html#pillars">Health</a></li>
+    <li><a href="index.html#pillars">Building</a></li>
+    <li><a href="index.html#about">About</a></li>
+  </ul>
+  <a class="nav-cta" href="#discovery">Book free call</a>
+</nav>
+
+<div class="cons-hero">
+  <span class="eyebrow cons-hero-eyebrow">AI Consulting</span>
+  <h1 class="cons-hero-title serif">I don't advise on AI.<br>I build it <em>inside your actual tools</em> and stay in it with you until it works.</h1>
+  <p class="cons-hero-sub source">No slide decks. No theory. We sit down, find the thing eating your time, and fix it inside the software you already have open.</p>
+  <a class="btn-primary" href="#discovery">Book the free call</a>
+</div>
+
+<div class="cons-section" id="discovery">
+  <span class="eyebrow cons-section-label">How it works</span>
+  <h2 class="cons-section-title serif">Start with a real conversation,<br><em>not a sales pitch.</em></h2>
+  <p class="discovery-note">15-minute call. I ask what's actually slowing you down, and tell you honestly if I can fix it.</p>
+
+  <div class="tier-grid">
+    <div class="tier-card">
+      <span class="tier-label">Foundation</span>
+      <div class="tier-price serif">$500</div>
+      <p class="tier-desc">What's the thing eating most of your time? We sit down, figure it out, and get it set up for you together.</p>
+    </div>
+    <div class="tier-card tier-engine">
+      <span class="tier-label">Engine</span>
+      <div class="tier-price serif">$1,250</div>
+      <p class="tier-desc">A few apps actually talking to each other. Usually the next step after that first workflow — you come back, and we add another one in.</p>
+    </div>
+    <div class="tier-card tier-full">
+      <span class="tier-label">Full build</span>
+      <div class="tier-price serif">$2,500</div>
+      <p class="tier-desc">The whole operational mess, taken apart and rebuilt so it runs without you holding it together.</p>
+    </div>
+    <div class="tier-card tier-retainer">
+      <span class="tier-label">Retainer</span>
+      <div class="tier-price serif">$750<span>/mo</span></div>
+      <p class="tier-desc">Things break sometimes. I'm still here with you when they do.</p>
+      <p class="tier-fine">*3-month minimum, just to keep things running. After that, it's up to you.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cons-section">
+  <span class="eyebrow cons-section-label">What actually happens</span>
+  <h2 class="cons-section-title serif">Three steps.<br><em>No mystery.</em></h2>
+  <div class="how-grid">
+    <div>
+      <div class="how-num">01</div>
+      <div class="how-title">We talk it through</div>
+      <p class="how-body source">Free call. You tell me what's slowing you down. I tell you honestly whether this is something I can actually fix, or if it's not a good fit.</p>
+    </div>
+    <div>
+      <div class="how-num">02</div>
+      <div class="how-title">I build it with you watching</div>
+      <p class="how-body source">Inside the tools you already use — your calendar, your email, your spreadsheets. No new software to learn, no migration headache.</p>
+    </div>
+    <div>
+      <div class="how-num">03</div>
+      <div class="how-title">I stay until it works</div>
+      <p class="how-body source">Not handed off and forgotten. If it breaks or needs tuning, I'm in it with you — that's what the retainer tier is actually for.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cons-cta">
+  <h2 class="cta-title serif">Figure out if this<br><em>actually fits.</em></h2>
+  <p class="cta-body source">15 minutes. No pitch deck, no pressure. Just an honest conversation about what's eating your time and whether I can help.</p>
+  <a class="btn-primary" href="mailto:hello@ninya.co?subject=Free%20discovery%20call">Book the free call</a>
+  <p class="cta-note">No spam. No follow-up funnel. Just a real conversation.</p>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo" href="index.html">
+        <svg width="22" height="27" viewBox="0 0 88 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><radialGradient id="lg2f" cx="50%" cy="42%" r="58%"><stop offset="0%" stop-color="#E07018"/><stop offset="35%" stop-color="#C03020"/><stop offset="100%" stop-color="#4A0E08"/></radialGradient><radialGradient id="fg2f" cx="50%" cy="72%" r="52%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#F07020"/><stop offset="100%" stop-color="#C02820" stop-opacity="0"/></radialGradient></defs>
+          <path d="M 44 88 Q 43 82, 42 78 C 36 76, 30 78, 24 75 C 20 73, 18 69, 20 66 C 22 63, 26 62, 30 63 C 26 60, 20 58, 18 53 C 16 48, 19 43, 23 42 C 20 40, 15 36, 17 31 C 19 26, 25 26, 29 28 C 27 25, 25 20, 27 16 C 29 12, 34 12, 37 15 C 36 11, 36 6, 39 3 C 41 1, 44 2, 44 5 C 44 2, 47 1, 49 3 C 52 6, 52 11, 51 15 C 54 12, 59 12, 61 16 C 63 20, 61 25, 59 28 C 63 26, 69 26, 71 31 C 73 36, 68 40, 65 42 C 69 43, 72 48, 70 53 C 68 58, 62 60, 58 63 C 62 62, 66 63, 68 66 C 70 69, 68 73, 64 75 C 58 78, 52 76, 46 78 Q 45 82, 44 88 Z" fill="url(#lg2f)" stroke="#1A0804" stroke-width="1"/>
+          <ellipse cx="44" cy="44" rx="19" ry="26" fill="url(#fg2f)" opacity=".8"/>
+          <path d="M44 68 C38 56 32 42 36 26 C38 18 41 13 44 10 C47 13 50 18 52 26 C56 42 50 56 44 68Z" fill="#F07020" opacity=".7"/>
+        </svg>
+        <span class="footer-logo-text serif">Ninya</span>
+      </a>
+      <p class="footer-tagline source">Real food. Real research.<br>No blueprint required.</p>
+    </div>
+    <div>
+      <span class="footer-col-label">Reading</span>
+      <ul class="footer-links">
+        <li><a href="blog.html" class="source">All Posts</a></li>
+        <li><a href="blog.html" class="source">Health &amp; Body</a></li>
+        <li><a href="blog.html" class="source">Building</a></li>
+        <li><a href="blog.html" class="source">Curiosity &amp; AI</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-label">Brands</span>
+      <ul class="footer-links">
+        <li><a href="https://cleangutco.netlify.app" class="source">Clean Gut Co.</a></li>
+        <li><a href="index.html#pillars" class="source">Ninya Builds</a></li>
+        <li><a href="index.html#pillars" class="source">Ninya Explores</a></li>
+        <li><a href="index.html#pillars" class="source">The Ember</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-quote serif">"No Blueprint Required."<strong>Know Your Nature. Fuel Your Power.</strong></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Ninya &nbsp;·&nbsp; All rights reserved.</p>
+    <p class="footer-copy">hello@ninya.co</p>
+  </div>
+</footer>
+</body>
+</html>
