@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Never Stop Thinking. Here's How I Stopped Losing Every Idea. | Ninya</title>
+<meta name="description" content="My brain doesn't really stop. The ideas were never the problem — the landing strip was the problem. Here's what changed.">
+<meta property="og:title" content="I Never Stop Thinking. Here's How I Stopped Losing Every Idea.">
+<meta property="og:description" content="My brain doesn't really stop. The ideas were never the problem — the landing strip was the problem. Here's what changed.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0D150E;--bg-2:#111A12;--bg-card:#162018;--bg-section:#0A1208;
+  --ember:#C0392B;--harvest:#D4622A;--gold:#E8841A;
+  --parch:#F5EFE0;--sand:#E8D5B7;--mesa:#A0522D;--bark:#6B3A2A;
+  --sage:#8B9E76;--sage-dim:#4A6B42;
+  --text:#F5EFE0;--text-mid:#C8B89A;--text-dim:#7A6A58;--text-muted:#4A3A2A;
+  --border:rgba(107,58,42,.18);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.source{font-family:'Source Serif 4',Georgia,serif}
+.eyebrow{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--harvest);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:68px;background:rgba(8,13,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(107,58,42,.12);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:21px;font-weight:900;color:var(--parch);letter-spacing:-.3px;}
+.nav-links{display:flex;gap:40px;list-style:none;}
+.nav-links a{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .25s;}
+.nav-links a:hover,.nav-links a.active{color:var(--parch)}
+.nav-cta{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--harvest);color:var(--parch);padding:11px 26px;border:none;cursor:pointer;text-decoration:none;transition:background .25s;}
+.nav-cta:hover{background:var(--ember)}
+.btn-primary{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:var(--harvest);color:var(--parch);padding:15px 34px;text-decoration:none;border:none;cursor:pointer;transition:background .25s;display:inline-block;}
+.btn-primary:hover{background:var(--ember)}
+footer{background:rgba(5,8,6,.98);padding:56px 56px 36px;border-top:1px solid var(--border);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:52px;}
+.footer-logo{display:flex;align-items:center;gap:9px;margin-bottom:14px;text-decoration:none;}
+.footer-logo-text{font-family:'Playfair Display',serif;font-size:19px;font-weight:900;color:var(--parch);}
+.footer-tagline{font-family:'Source Serif 4',serif;font-size:13px;font-style:italic;color:var(--text-dim);line-height:1.7;}
+.footer-col-label{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;display:block;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-family:'Source Serif 4',serif;font-size:14px;color:var(--text-dim);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--parch)}
+.footer-quote{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--text-muted);line-height:1.6;}
+.footer-quote strong{display:block;font-style:normal;color:var(--harvest);font-size:13px;margin-top:6px;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border);flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:12px;color:var(--text-muted);font-family:'DM Sans',sans-serif;}
+@media(max-width:900px){
+  nav{padding:0 24px}.nav-links{display:none}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+
+.post-hero{
+  padding:140px 56px 80px;
+  max-width:800px;margin:0 auto;
+}
+.post-meta{
+  display:flex;align-items:center;gap:16px;
+  margin-bottom:28px;flex-wrap:wrap;
+}
+.post-cat{
+  font-size:10px;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:#7B9BA4;
+}
+.post-date{
+  font-size:12px;color:var(--text-muted);
+  font-family:'DM Sans',sans-serif;
+}
+.post-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,5vw,64px);
+  font-weight:900;line-height:1.05;
+  color:var(--parch);margin-bottom:24px;
+  letter-spacing:-.02em;
+}
+.post-excerpt{
+  font-family:'Source Serif 4',serif;
+  font-size:19px;font-style:italic;
+  color:var(--text-mid);line-height:1.7;
+  margin-bottom:48px;max-width:640px;
+}
+.post-divider{
+  width:64px;height:2px;
+  background:linear-gradient(to right,var(--ember),transparent);
+  margin-bottom:64px;
+}
+.post-body{
+  max-width:680px;margin:0 auto;
+  padding:0 56px 80px;
+}
+.post-body p{
+  font-family:'Source Serif 4',serif;
+  font-size:18px;line-height:1.9;
+  color:var(--text-mid);
+  margin-bottom:28px;
+}
+.post-body hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:48px 0;
+}
+.post-body em{font-style:italic;color:var(--text-light)}
+.post-body strong{font-weight:700;color:var(--parch)}
+.post-sig{
+  margin-top:64px;padding-top:32px;
+  border-top:1px solid var(--border);
+}
+.post-sig p{
+  font-family:'Source Serif 4',serif;
+  font-size:14px;font-style:italic;
+  color:var(--text-muted);
+}
+.post-nav{
+  max-width:680px;margin:0 auto;
+  padding:0 56px 80px;
+  display:flex;justify-content:space-between;gap:24px;
+  flex-wrap:wrap;
+}
+.post-nav-link{
+  font-family:'DM Sans',sans-serif;
+  font-size:12px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--harvest);text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+  transition:gap .2s;
+}
+.post-nav-link:hover{gap:14px}
+.post-subscribe{
+  background:var(--bg-card);
+  max-width:680px;margin:0 auto 80px;
+  padding:52px 56px;
+  border-top:3px solid var(--ember);
+}
+.post-subscribe h3{
+  font-family:'Playfair Display',serif;
+  font-size:26px;font-weight:900;
+  color:var(--parch);margin-bottom:12px;
+}
+.post-subscribe p{
+  font-family:'Source Serif 4',serif;
+  font-size:15px;color:var(--text-dim);
+  margin-bottom:24px;line-height:1.8;
+}
+.subscribe-row{display:flex;gap:12px;flex-wrap:wrap;}
+.subscribe-row input{
+  flex:1;min-width:200px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(200,184,154,.15);
+  color:var(--parch);font-family:'DM Sans',sans-serif;
+  font-size:14px;padding:13px 18px;outline:none;
+}
+.subscribe-row input::placeholder{color:var(--text-muted)}
+@media(max-width:700px){
+  .post-hero,.post-body,.post-nav,.post-subscribe{padding-left:24px;padding-right:24px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="ninya-logo-icon.png" alt="Ninya" class="leaf-svg" width="28" height="34">
+    <span class="nav-logo-text">Ninya</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#pillars">Health</a></li>
+    <li><a href="index.html#pillars">Building</a></li>
+    <li><a href="index.html#pillars">Curiosity</a></li>
+    <li><a href="index.html#about">About</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html#subscribe">Subscribe free</a>
+</nav>
+<article>
+  <div class="post-hero">
+    <div class="post-meta">
+      <span class="post-cat eyebrow">Entrepreneurship &amp; Curiosity</span>
+      <span class="post-date">·</span>
+      <span class="post-date">June 1, 2026</span>
+      <span class="post-date">·</span>
+      <span class="post-date">Ryan Ninness</span>
+    </div>
+    <h1 class="post-title serif">I Never Stop Thinking. Here's How I Stopped Losing Every Idea.</h1>
+    <p class="post-excerpt source">My brain doesn't really stop. The ideas were never the problem — the landing strip was the problem. Here's what changed.</p>
+    <div class="post-divider"></div>
+  </div>
+  <div class="post-body">
+
+<p>I'm always thinking. That's just how I'm wired — my brain doesn't really stop. Most of the time that's a good thing. Ideas show up constantly, connections happen out of nowhere, questions I didn't know I had start answering themselves mid-thought.</p>
+<p>The problem was I kept losing them.</p>
+<p>Not sometimes. Constantly. I'd be driving and something would click and by the time I parked it was gone. I'd be falling asleep and have a thought that felt genuinely important and tell myself I'd hold onto it. I never held onto it. I'd be in the middle of a completely unrelated conversation and get an idea that had nothing to do with what we were talking about, and the second the conversation moved on the idea went with it.</p>
+<p>The ideas weren't the problem. The landing strip was the problem.</p>
+<p>I had no place to put things down where they'd still be there when I came back.</p>
+<hr>
+<p>For a while I tried the obvious stuff. Notes app on my phone. A physical notebook. Voice memos I never listened to back. None of it really stuck — not because the tools were bad, but because capturing an idea is only half the problem. The other half is being able to find it again, connect it to something else, and actually do something with it.</p>
+<p>A note buried in an app you never open isn't a system. It's a graveyard.</p>
+<hr>
+<p>What actually changed things was starting to think out loud in conversations with Claude.</p>
+<p>Not using it as a search engine. Not asking it to write things for me. Just... talking. Saying "here's what I'm thinking about today" and seeing where it went. And what happened was that the conversation itself became the landing strip. The idea would come out, get responded to, get pushed on a little, connect to something I hadn't thought of — and by the end of it the idea wasn't a fleeting thirty-second thought anymore. It was something I could actually look at.</p>
+<p>That changed everything about how I work.</p>
+<hr>
+<p>I started keeping a running Notion workspace alongside those conversations. Not an elaborate system — I'm not a productivity nerd, I just needed somewhere that wasn't a graveyard. The ideas from the conversations would go there. The connections between them would go there. The things I wanted to come back to would go there.</p>
+<p>And over time something happened that I didn't expect. The ideas started talking to each other.</p>
+<p>A thought I had about gut health in January connected to something I figured out about content creation in March. A question I'd been sitting with about how people actually learn things ended up being the same question as something I was working through about how to help small business owners. Things I'd been treating as separate interests turned out to be the same conversation just wearing different clothes.</p>
+<p>I couldn't have seen any of that if the ideas had kept disappearing.</p>
+<hr>
+<p>I want to be honest about something though. This isn't a productivity hack. I'm not going to tell you to use a specific app or set up a specific system and promise it'll change your life in thirty days. That's not what happened for me and I don't think that's how it actually works.</p>
+<p>What happened for me was simpler and messier than that. I just found a way to think out loud that kept the thoughts from evaporating. The tool was almost secondary — what mattered was having somewhere to put the thinking while it was still warm. Before the distraction hit. Before the thought dissolved into whatever came next.</p>
+<p>If you're someone whose brain doesn't stop either, you probably know exactly what I'm talking about. The ideas aren't the problem. They never were. You just need a place where they can land and stay long enough to become something.</p>
+<hr>
+<p>That's a big part of what Ninya is, honestly. It's what happens when the ideas finally have somewhere to go.</p>
+<p>Some of what I write here will be stuff I figured out years ago and am only now articulating. Some of it will be something I worked through in a conversation last week. Some of it will be half-formed and I'll say so. But none of it would exist if I hadn't found a way to stop losing the thoughts before I could do anything with them.</p>
+<p>So if you're reading this and you've got a head full of ideas that keep disappearing — that's not a you problem. That's a landing strip problem. And it's a much easier thing to fix than you might think.</p>
+<hr>
+<p>If you want to stick around while I figure out the rest of it — you're welcome here.</p>
+<p>No pitch. No pressure. Just someone who thinks too much, finally doing something about it.</p>
+<p><strong>No blueprint required.</strong></p>
+
+    <div class="post-sig">
+      <p>— Ryan Ninness, Founder of Ninya</p>
+    </div>
+  </div>
+  <div class="post-subscribe">
+    <h3 class="serif">Stay in it with us.</h3>
+    <p class="source">New pieces delivered to your inbox when there's something worth saying. No schedule pressure. No spam.</p>
+    <div class="subscribe-row">
+      <input type="email" placeholder="Your email address">
+      <a class="btn-primary" href="#">Subscribe free</a>
+    </div>
+  </div>
+  <div class="post-nav">
+    <a class="post-nav-link" href="conversations-were-already-content.html">← Previous post</a>
+    <a class="post-nav-link" href="everything-i-want-to-do.html">Next post →</a>
+  </div>
+</article>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo" href="index.html">
+        <img src="ninya-logo-icon.png" alt="Ninya" width="22" height="27">
+        <span class="footer-logo-text serif">Ninya</span>
+      </a>
+      <p class="footer-tagline source">Real food. Real research.<br>No blueprint required.</p>
+    </div>
+    <div>
+      <span class="footer-col-label">Reading</span>
+      <ul class="footer-links">
+        <li><a href="blog.html" class="source">All Posts</a></li>
+        <li><a href="blog.html" class="source">Health &amp; Body</a></li>
+        <li><a href="blog.html" class="source">Building</a></li>
+        <li><a href="blog.html" class="source">Curiosity &amp; AI</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-label">Brands</span>
+      <ul class="footer-links">
+        <li><a href="https://cleangutco.netlify.app" class="source">Clean Gut Co.</a></li>
+        <li><a href="index.html#pillars" class="source">Ninya Builds</a></li>
+        <li><a href="index.html#pillars" class="source">Ninya Explores</a></li>
+        <li><a href="index.html#pillars" class="source">The Ember</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-quote serif">"No Blueprint Required."<strong>Know Your Nature. Fuel Your Power.</strong></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Ninya &nbsp;·&nbsp; All rights reserved.</p>
+    <p class="footer-copy">hello@ninya.co</p>
+  </div>
+</footer>
+</body>
+</html>
