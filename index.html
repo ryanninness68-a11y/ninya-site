@@ -11,24 +11,24 @@
 /* ── RESET & BASE ──────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:          #0D150E;
+  --bg:         #0D150E;
   --bg-2:        #111A12;
   --bg-card:     #162018;
   --bg-section:  #0A1208;
-  --ember:       #C0392B;
-  --harvest:     #D4622A;
-  --gold:        #E8841A;
-  --parch:       #F5EFE0;
-  --sand:        #E8D5B7;
-  --mesa:        #A0522D;
-  --bark:        #6B3A2A;
-  --sage:        #8B9E76;
-  --sage-dim:    #4A6B42;
-  --text:        #F5EFE0;
-  --text-mid:    #C8B89A;
-  --text-dim:    #7A6A58;
-  --text-muted:  #4A3A2A;
-  --border:      rgba(107,58,42,.18);
+  --ember:        #C0392B;
+  --harvest:      #D4622A;
+  --gold:         #E8841A;
+  --parch:        #F5EFE0;
+  --sand:         #E8D5B7;
+  --mesa:         #A0522D;
+  --bark:         #6B3A2A;
+  --sage:         #8B9E76;
+  --sage-dim:     #4A6B42;
+  --text:         #F5EFE0;
+  --text-mid:     #C8B89A;
+  --text-dim:     #7A6A58;
+  --text-muted:   #4A3A2A;
+  --border:       rgba(107,58,42,.18);
 }
 html{scroll-behavior:smooth}
 body{
@@ -40,7 +40,7 @@ body{
   overflow-x:hidden;
 }
 
-/* ── TYPOGRAPHY ─────────────────────── */
+/* ── TYPOGRAPHY ──────────────────────── */
 .serif{font-family:'Playfair Display',Georgia,serif}
 .source{font-family:'Source Serif 4',Georgia,serif}
 .eyebrow{
@@ -50,7 +50,7 @@ body{
   color:var(--harvest);
 }
 
-/* ── NAV ────────────────────────── */
+/* ── NAV ─────────────────────────── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
@@ -87,7 +87,7 @@ nav{
 }
 .nav-cta:hover{background:var(--ember)}
 
-/* ── HERO ────────────────────────── */
+/* ── HERO ─────────────────────────── */
 .hero{
   position:relative;
   min-height:100vh;
@@ -189,7 +189,7 @@ nav{
   background:var(--harvest);opacity:.7;
 }
 
-/* ── PILLARS ─────────────────────── */
+/* ── PILLARS ──────────────────────── */
 .pillars{
   background:var(--bg-section);
   padding:110px 56px;
@@ -405,7 +405,7 @@ nav{
   text-align:center;
 }
 
-/* ── THREE COLUMNS (research/values) ───────── */
+/* ── THREE COLUMNS (research/values) ─────────── */
 .why{
   background:var(--bg);
   padding:110px 56px;
@@ -516,7 +516,7 @@ footer{
 /* ── LOGO SVG SHARED STYLES ───────────── */
 .leaf-svg{display:block}
 
-/* ── ANIMATIONS ───────────────────── */
+/* ── ANIMATIONS ────────────────────── */
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(22px)}
   to{opacity:1;transform:translateY(0)}
@@ -527,7 +527,7 @@ footer{
 .pillar:nth-child(2){animation-delay:.15s}
 .pillar:nth-child(3){animation-delay:.25s}
 
-/* ── RESPONSIVE ───────────────────── */
+/* ── RESPONSIVE ────────────────────── */
 @media(max-width:900px){
   nav{padding:0 24px}
   .nav-links{display:none}
@@ -588,7 +588,7 @@ footer{
   <div class="hero-content">
     <div class="hero-eyebrow">
       <div class="hero-eyebrow-line"></div>
-      <span class="eyebrow">Ninya &nbsp;·&nbsp; Est. 2026</span>
+      <span class="eyebrow">Ninya &nbsp;&middot;&nbsp; Est. 2026</span>
     </div>
     <h1 class="hero-title serif">
       No Blueprint<br><em>Required.</em>
@@ -596,13 +596,13 @@ footer{
     <p class="hero-sub">Figuring it out in public.</p>
     <div class="hero-divider"></div>
     <p class="hero-desc">
-      Honest writing about health, building, and curiosity — 
+      Honest writing about health, building, and curiosity &mdash; 
       from someone genuinely in the middle of it. 
       No finished version. No expert authority. Just the real journey.
     </p>
     <div class="hero-actions">
       <a class="btn-primary" href="#subscribe">Subscribe free</a>
-      <a class="btn-ghost" href="#about">About Ninya →</a>
+      <a class="btn-ghost" href="#about">About Ninya &#x2192;</a>
     </div>
   </div>
   <div class="hero-trust">
@@ -620,21 +620,21 @@ footer{
     <p class="section-body source">All of it traces back to curiosity. All of it is real. None of it requires a blueprint.</p>
   </div>
   <div class="pillars-grid">
-    <a class="pillar pillar-link" href="https://cleangutco.netlify.app" target="_blank" rel="noopener">
+    <a class="pillar pillar-link" href="https://cleangutco.com" target="_blank" rel="noopener">
       <div class="pillar-accent health"></div>
       <span class="pillar-num">01</span>
       <span class="pillar-tag health">Health &amp; Body</span>
       <h3 class="pillar-name serif">Clean Gut Co.</h3>
-      <p class="pillar-desc source">Gut health without the fear tactics or the jargon. What the research actually says — written by someone who went down the rabbit hole out of genuine curiosity and couldn't stop.</p>
-      <span class="pillar-cta">Visit Clean Gut Co. →</span>
+      <p class="pillar-desc source">Gut health without the fear tactics or the jargon. What the research actually says &mdash; written by someone who went down the rabbit hole out of genuine curiosity and couldn&apos;t stop.</p>
+      <span class="pillar-cta">Visit Clean Gut Co. &#x2192;</span>
     </a>
     <a class="pillar pillar-link" href="blog.html">
       <div class="pillar-accent build"></div>
       <span class="pillar-num">02</span>
       <span class="pillar-tag build">Building &amp; Entrepreneurship</span>
       <h3 class="pillar-name serif">Ninya Builds</h3>
-      <p class="pillar-desc source">The honest experience of building something with no roadmap. What it actually feels and looks like when the mess becomes something real — documented in public.</p>
-      <span class="pillar-cta">Read the pieces →</span>
+      <p class="pillar-desc source">The honest experience of building something with no roadmap. What it actually feels and looks like when the mess becomes something real &mdash; documented in public.</p>
+      <span class="pillar-cta">Read the pieces &#x2192;</span>
     </a>
     <a class="pillar pillar-link" href="blog.html">
       <div class="pillar-accent curious"></div>
@@ -642,7 +642,7 @@ footer{
       <span class="pillar-tag curious">Curiosity &amp; AI</span>
       <h3 class="pillar-name serif">Ninya Explores</h3>
       <p class="pillar-desc source">What happens when a scattered brain finally finds a place to think out loud. AI tools, learning fast, and the joy of following a question wherever it leads.</p>
-      <span class="pillar-cta">Read the pieces →</span>
+      <span class="pillar-cta">Read the pieces &#x2192;</span>
     </a>
   </div>
 </section>
@@ -654,7 +654,7 @@ footer{
       <span class="eyebrow" style="display:block;margin-bottom:10px;">The Writing</span>
       <h2 class="serif" style="font-size:clamp(28px,3.5vw,44px);font-weight:900;color:var(--parch);line-height:1.1;">Latest from Ninya.</h2>
     </div>
-    <a href="blog.html" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--harvest);text-decoration:none;">All posts →</a>
+    <a href="blog.html" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--harvest);text-decoration:none;">All posts &#x2192;</a>
   </div>
   <div class="featured-inner">
     <div class="featured-visual">
@@ -662,19 +662,19 @@ footer{
       <span class="eyebrow featured-visual-tag">Latest Post</span>
     </div>
     <div class="featured-content">
-      <span class="eyebrow featured-tag">Building in Public &nbsp;·&nbsp; June 2026</span>
-      <h3 class="featured-title serif">No Blueprint Required: Why I'm Building This in Public</h3>
-      <p class="featured-excerpt source">I worked jobs that didn't fit. School didn't fit. The nine-to-five blueprint I was handed didn't fit. And for a long time I thought that was my problem. It wasn't.</p>
-      <a class="featured-read" href="no-blueprint-required.html">Read the piece →</a>
+      <span class="eyebrow featured-tag">Building in Public &nbsp;&middot;&nbsp; June 2026</span>
+      <h3 class="featured-title serif">No Blueprint Required: Why I&apos;m Building This in Public</h3>
+      <p class="featured-excerpt source">I worked jobs that didn&apos;t fit. School didn&apos;t fit. The nine-to-five blueprint I was handed didn&apos;t fit. And for a long time I thought that was my problem. It wasn&apos;t.</p>
+      <a class="featured-read" href="no-blueprint-required.html">Read the piece &#x2192;</a>
     </div>
   </div>
   <a href="conversations-were-already-content.html" style="display:grid;grid-template-columns:auto 1fr;gap:0;background:var(--bg-card);margin-top:3px;text-decoration:none;transition:background .3s;" onmouseover="this.style.background='#1C2A1E'" onmouseout="this.style.background='var(--bg-card)'">
     <div style="width:8px;background:#7B9BA4;"></div>
     <div style="padding:36px 44px;">
-      <span class="eyebrow" style="display:block;margin-bottom:12px;color:#7B9BA4;">Curiosity &amp; AI &nbsp;·&nbsp; June 2, 2026</span>
+      <span class="eyebrow" style="display:block;margin-bottom:12px;color:#7B9BA4;">Curiosity &amp; AI &nbsp;&middot;&nbsp; June 2, 2026</span>
       <h3 class="serif" style="font-size:22px;font-weight:700;color:var(--parch);line-height:1.25;margin-bottom:12px;">The Day I Realized My Conversations Were Already Content</h3>
-      <p class="source" style="font-size:14px;color:var(--text-dim);line-height:1.8;margin-bottom:20px;max-width:680px;">I wasn't trying to start a business. There was no plan. I just started having conversations — and somewhere in all of that, without meaning to, the business found me.</p>
-      <span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--harvest);">Read the piece →</span>
+      <p class="source" style="font-size:14px;color:var(--text-dim);line-height:1.8;margin-bottom:20px;max-width:680px;">I wasn&apos;t trying to start a business. There was no plan. I just started having conversations &mdash; and somewhere in all of that, without meaning to, the business found me.</p>
+      <span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--harvest);">Read the piece &#x2192;</span>
     </div>
   </a>
 </section>
@@ -688,15 +688,15 @@ footer{
   <div class="why-grid">
     <div class="why-card">
       <h3 class="why-card-title serif">Real research.<br><em>Plain language.</em></h3>
-      <p class="why-card-body source">Every health claim traces back to peer-reviewed research. Every explanation is written for someone who didn't go to medical school — because neither did we.</p>
+      <p class="why-card-body source">Every health claim traces back to peer-reviewed research. Every explanation is written for someone who didn&apos;t go to medical school &mdash; because neither did we.</p>
     </div>
     <div class="why-card">
       <h3 class="why-card-title serif">Built in public.<br><em>Mess included.</em></h3>
-      <p class="why-card-body source">You're not getting the finished version here. You're getting the in-progress version — the confusion, the breakthroughs, and everything in between.</p>
+      <p class="why-card-body source">You&apos;re not getting the finished version here. You&apos;re getting the in-progress version &mdash; the confusion, the breakthroughs, and everything in between.</p>
     </div>
     <div class="why-card">
       <h3 class="why-card-title serif">No pressure.<br><em>Open doors only.</em></h3>
-      <p class="why-card-body source">No funnels. No fear tactics. No "limited time" anything. Just honest writing from someone who's genuinely figuring it out — and thinks you might be too.</p>
+      <p class="why-card-body source">No funnels. No fear tactics. No &ldquo;limited time&rdquo; anything. Just honest writing from someone who&apos;s genuinely figuring it out &mdash; and thinks you might be too.</p>
     </div>
   </div>
 </section>
@@ -709,14 +709,14 @@ footer{
   <div class="about-content">
     <span class="eyebrow" style="display:block;margin-bottom:20px">About Ninya</span>
     <blockquote class="about-quote serif">
-      "The world would be a better place if everybody did what they love instead of being stuck."
+      &ldquo;The world would be a better place if everybody did what they love instead of being stuck.&rdquo;
     </blockquote>
     <p class="about-body source">
-      Ninya started as a conversation. Not a strategy session — just thinking out loud with an AI that could finally keep up with the way my brain moves. One thread led to another. 
+      Ninya started as a conversation. Not a strategy session &mdash; just thinking out loud with an AI that could finally keep up with the way my brain moves. One thread led to another. 
       A gut health rabbit hole. A business framework. A long honest look at forty years of feeling like I was always in the wrong room.
     </p>
     <p class="about-body source">
-      Somewhere in all of it I realized the thing I'd been trying to build my whole life was just this: a place to be honest about the journey. Ninya is that place.
+      Somewhere in all of it I realized the thing I&apos;d been trying to build my whole life was just this: a place to be honest about the journey. Ninya is that place.
     </p>
     <p class="about-sig serif">Ryan Ninness</p>
     <p class="about-sig-role">Founder, Ninya</p>
@@ -730,15 +730,15 @@ footer{
     <h2 class="subscribe-title serif">Stay in it<br><em>with us.</em></h2>
     <p class="subscribe-body source">
       New pieces when they go up. No schedule, no cadence, no content calendar pressure. 
-      Just honest writing delivered to your inbox when there's something worth saying.
-      Unsubscribe any time — no hard feelings, no guilt trip.
+      Just honest writing delivered to your inbox when there&apos;s something worth saying.
+      Unsubscribe any time &mdash; no hard feelings, no guilt trip.
     </p>
   </div>
   <div class="subscribe-form-wrap">
     <form class="subscribe-form" onsubmit="return false">
       <input type="text" placeholder="First name (optional)">
       <input type="email" placeholder="Your email address" required>
-      <a class="btn-primary" href="#">Subscribe free →</a>
+      <a class="btn-primary" href="#">Subscribe free &#x2192;</a>
       <p class="subscribe-note">No spam. No pressure. Just the writing.</p>
     </form>
   </div>
@@ -766,19 +766,19 @@ footer{
     <div>
       <span class="footer-col-label">Brands</span>
       <ul class="footer-links">
-        <li><a href="https://cleangutco.netlify.app" class="source">Clean Gut Co.</a></li>
+        <li><a href="https://cleangutco.com" class="source">Clean Gut Co.</a></li>
         <li><a href="#" class="source">Ninya Builds</a></li>
         <li><a href="#" class="source">Ninya Explores</a></li>
         <li><a href="#" class="source">The Ember</a></li>
       </ul>
     </div>
     <div>
-      <p class="footer-quote serif">"No Blueprint Required."<strong>Know Your Nature. Fuel Your Power.</strong></p>
+      <p class="footer-quote serif">&ldquo;No Blueprint Required.&rdquo;<strong>Know Your Nature. Fuel Your Power.</strong></p>
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2026 Ninya &nbsp;·&nbsp; All rights reserved.</p>
-    <p class="footer-copy">hello@ninya.co</p>
+    <p class="footer-copy">&copy; 2026 Ninya &nbsp;&middot;&nbsp; All rights reserved.</p>
+    <p class="footer-copy">ryan@ninya.work</p>
   </div>
 </footer>
 </body>
