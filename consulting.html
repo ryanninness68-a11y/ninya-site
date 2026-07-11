@@ -3,279 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Consulting — Ninya | No Blueprint Required</title>
-<meta name="description" content="I don't advise on AI. I build it inside your actual tools and stay in it with you until it works.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>AI Consulting — Ninya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;1,400&family=Source+Serif+4:ital,wght@0,400;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Source Serif 4',Georgia,serif;background:#140D08;color:#E8D5B7;line-height:1.7}
+a{color:inherit;text-decoration:none}
+img{display:block}
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0D150E;--bg-2:#111A12;--bg-card:#162018;--bg-section:#0A1208;
-  --ember:#C0392B;--harvest:#D4622A;--gold:#E8841A;
-  --parch:#F5EFE0;--sand:#E8D5B7;--mesa:#A0522D;--bark:#6B3A2A;
-  --sage:#8B9E76;--sage-dim:#4A6B42;--tan:#C9B896;
-  --text:#F5EFE0;--text-mid:#C8B89A;--text-dim:#7A6A58;--text-muted:#4A3A2A;
-  --border:rgba(107,58,42,.18);
-}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
-.serif{font-family:'Playfair Display',Georgia,serif}
-.source{font-family:'Source Serif 4',Georgia,serif}
-.eyebrow{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--harvest);}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:68px;background:rgba(8,13,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(107,58,42,.12);}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.nav-logo img{width:28px;height:34px;display:block;}
-.nav-logo-text{font-family:'Playfair Display',serif;font-size:21px;font-weight:900;color:var(--parch);letter-spacing:-.3px;}
-.nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .25s;}
-.nav-links a:hover,.nav-links a.active{color:var(--parch)}
-.nav-cta{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--harvest);color:var(--parch);padding:11px 26px;border:none;cursor:pointer;text-decoration:none;transition:background .25s;}
-.nav-cta:hover{background:var(--ember)}
-.btn-primary{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:var(--harvest);color:var(--parch);padding:15px 34px;text-decoration:none;border:none;cursor:pointer;transition:background .25s;display:inline-block;}
-.btn-primary:hover{background:var(--ember)}
-footer{background:rgba(5,8,6,.98);padding:56px 56px 36px;border-top:1px solid var(--border);}
-.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:52px;}
-.footer-logo{display:flex;align-items:center;gap:9px;margin-bottom:14px;text-decoration:none;}
-.footer-logo img{width:22px;height:27px;display:block;}
-.footer-logo-text{font-family:'Playfair Display',serif;font-size:19px;font-weight:900;color:var(--parch);}
-.footer-tagline{font-family:'Source Serif 4',serif;font-size:13px;font-style:italic;color:var(--text-dim);line-height:1.7;}
-.footer-col-label{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;display:block;}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.footer-links a{font-family:'Source Serif 4',serif;font-size:14px;color:var(--text-dim);text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:var(--parch)}
-.footer-quote{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--text-muted);line-height:1.6;}
-.footer-quote strong{display:block;font-style:normal;color:var(--harvest);font-size:13px;margin-top:6px;}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--border);flex-wrap:wrap;gap:12px;}
-.footer-copy{font-size:12px;color:var(--text-muted);font-family:'DM Sans',sans-serif;}
-@media(max-width:900px){
-  nav{padding:0 24px}.nav-links{display:none}
-  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
-}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid rgba(107,58,42,0.3);background:#140D08;position:sticky;top:0;z-index:100}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:600;color:#E8D5B7}
+.nav-brand img{width:28px;height:28px}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center}
+.nav-links a{color:#C8A96E;font-size:0.85rem;font-family:'DM Sans',sans-serif;transition:color 0.2s}
+.nav-links a:hover{color:#E8D5B7}
+.nav-cta{background:#C0392B;color:#F9EDE3!important;padding:0.4rem 1rem;border-radius:4px;font-size:0.8rem!important}
+.nav-cta:hover{background:#A0322B!important}
 
-.cons-hero{
-  padding:140px 56px 72px;
-  border-bottom:1px solid var(--border);
-}
-.cons-hero-eyebrow{margin-bottom:16px;display:block;}
-.cons-hero-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(38px,5.5vw,68px);
-  font-weight:900;line-height:1.05;
-  color:var(--parch);margin-bottom:20px;
-  letter-spacing:-.03em;max-width:760px;
-}
-.cons-hero-title em{font-style:italic;color:var(--harvest);}
-.cons-hero-sub{
-  font-family:'Source Serif 4',serif;
-  font-size:18px;
-  color:var(--text-mid);max-width:600px;line-height:1.7;margin-bottom:32px;
-}
-.cons-section{padding:64px 56px;border-bottom:1px solid var(--border);}
-.cons-section-label{display:block;margin-bottom:14px;}
-.cons-section-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(26px,3.2vw,38px);font-weight:900;
-  color:var(--parch);line-height:1.2;margin-bottom:36px;max-width:600px;
-}
-.cons-section-title em{font-style:italic;color:var(--harvest);}
-.discovery-note{
-  font-family:'Source Serif 4',serif;font-size:15px;font-style:italic;
-  color:var(--text-mid);text-align:center;margin-bottom:36px;max-width:520px;
-  margin-left:auto;margin-right:auto;line-height:1.7;
-}
-.tier-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:3px;
-}
-.tier-card{
-  background:var(--bg-card);
-  padding:36px 32px;
-  border-top:3px solid var(--harvest);
-}
-.tier-card.tier-engine{border-top-color:var(--gold);}
-.tier-card.tier-full{border-top-color:var(--mesa);}
-.tier-card.tier-retainer{border-top-color:var(--tan);}
-.tier-label{
-  font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;
-  letter-spacing:.2em;text-transform:uppercase;
-  color:var(--harvest);display:block;margin-bottom:14px;
-}
-.tier-engine .tier-label{color:var(--gold);}
-.tier-full .tier-label{color:var(--mesa);}
-.tier-retainer .tier-label{color:var(--tan);}
-.tier-price{
-  font-family:'Playfair Display',serif;font-size:32px;font-weight:900;
-  color:var(--parch);margin-bottom:14px;
-}
-.tier-price span{font-size:14px;color:var(--text-dim);font-family:'DM Sans',sans-serif;font-weight:400;}
-.tier-desc{
-  font-family:'Source Serif 4',serif;font-size:14px;color:var(--text-dim);
-  line-height:1.8;
-}
-.tier-fine{
-  font-family:'DM Sans',sans-serif;font-size:10.5px;color:var(--text-muted);
-  line-height:1.5;margin-top:10px;
-}
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;}
-.how-num{
-  font-family:'Playfair Display',serif;font-size:42px;font-weight:900;
-  color:var(--harvest);opacity:.5;margin-bottom:8px;
-}
-.how-title{
-  font-size:17px;font-weight:700;color:var(--parch);margin-bottom:10px;
-}
-.how-body{
-  font-family:'Source Serif 4',serif;font-size:14px;color:var(--text-dim);
-  line-height:1.8;
-}
-.cons-cta{
-  margin:64px 56px;
-  background:var(--bg-card);
-  padding:64px 72px;
-  border-top:3px solid var(--ember);
-  text-align:center;
-}
-.cta-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(26px,3vw,38px);font-weight:900;
-  color:var(--parch);line-height:1.15;margin-bottom:14px;
-}
-.cta-title em{font-style:italic;color:var(--harvest);}
-.cta-body{
-  font-family:'Source Serif 4',serif;
-  font-size:15px;color:var(--text-dim);line-height:1.9;
-  max-width:480px;margin:0 auto 28px;
-}
-.cta-note{
-  font-size:11px;color:var(--text-muted);
-  font-family:'DM Sans',sans-serif;margin-top:16px;
-}
-@media(max-width:900px){
-  .cons-hero,.cons-section,.cons-cta{padding-left:24px;padding-right:24px;}
-  .tier-grid{grid-template-columns:1fr;}
-  .how-grid{grid-template-columns:1fr;gap:32px;}
-  .cons-cta{margin:32px 24px;padding:40px 32px;}
-}
+.hero{padding:5rem 2rem 4rem;text-align:center;border-bottom:1px solid rgba(107,58,42,0.2);max-width:780px;margin:0 auto}
+.section-label{font-size:0.7rem;letter-spacing:0.15em;color:#C0392B;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:1rem}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;line-height:1.2;color:#E8D5B7;margin-bottom:1.25rem;max-width:600px;margin-left:auto;margin-right:auto}
+.hero h1 em{color:#E8A84A;font-style:italic}
+.hero .sub{font-size:1.05rem;color:#C8A96E;max-width:500px;margin:0 auto 2.5rem;font-family:'DM Sans',sans-serif}
+.hero-ctas{display:flex;flex-direction:column;align-items:center;gap:0.75rem}
+.btn-primary{background:#C0392B;color:#F9EDE3;padding:0.85rem 2rem;border-radius:4px;font-size:0.95rem;font-family:'DM Sans',sans-serif;display:inline-block;transition:background 0.2s}
+.btn-primary:hover{background:#A0322B}
+.btn-email{color:#C8A96E;font-size:0.85rem;font-family:'DM Sans',sans-serif}
+.btn-email a{color:#E8A84A;border-bottom:1px solid rgba(232,168,74,0.4)}
+.btn-email a:hover{border-bottom-color:#E8A84A}
+
+.page-section{padding:4rem 2rem;border-bottom:1px solid rgba(107,58,42,0.2);max-width:780px;margin:0 auto}
+h2{font-family:'Playfair Display',Georgia,serif;font-size:1.9rem;color:#E8D5B7;line-height:1.25;margin-bottom:0.5rem}
+h2 em{color:#E8A84A;font-style:italic}
+.section-intro{color:#C8A96E;font-size:0.9rem;font-family:'DM Sans',sans-serif;margin-top:0.75rem;line-height:1.7}
+
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:2rem}
+.pricing-card{background:#241A13;border:1px solid rgba(107,58,42,0.35);border-radius:8px;padding:1.25rem}
+.pricing-card.featured{border-color:#C0392B}
+.card-label{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#C0392B;font-family:'DM Sans',sans-serif;margin-bottom:0.5rem}
+.card-name{font-size:1rem;color:#E8D5B7;font-family:'Playfair Display',Georgia,serif;margin-bottom:0.4rem}
+.card-range{font-size:1.3rem;color:#E8A84A;font-family:'DM Sans',sans-serif;font-weight:600;margin-bottom:0.75rem}
+.card-desc{font-size:0.82rem;color:#C8A96E;line-height:1.6;font-family:'DM Sans',sans-serif}
+
+.mystery-door{background:#241A13;border:1px solid rgba(107,58,42,0.35);border-radius:8px;padding:2rem;margin-top:2rem}
+.mystery-door h3{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;color:#E8A84A;margin-bottom:0.75rem}
+.mystery-door p{font-size:0.88rem;color:#C8A96E;line-height:1.7;font-family:'DM Sans',sans-serif;margin-bottom:0.85rem}
+.door-ctas{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:1.25rem}
+.btn-door{background:transparent;border:1px solid rgba(192,57,43,0.5);color:#E8D5B7;padding:0.6rem 1.2rem;border-radius:4px;font-size:0.85rem;font-family:'DM Sans',sans-serif;transition:border-color 0.2s}
+.btn-door:hover{border-color:#C0392B}
+.door-email{color:#C8A96E;font-size:0.85rem;font-family:'DM Sans',sans-serif}
+.door-email a{color:#E8A84A;border-bottom:1px solid rgba(232,168,74,0.4)}
+
+.steps{display:flex;flex-direction:column;gap:2rem;margin-top:2.5rem}
+.step{display:flex;gap:1.5rem}
+.step-num{font-family:'Playfair Display',Georgia,serif;font-size:2rem;color:rgba(192,57,43,0.3);font-style:italic;flex-shrink:0;width:2.5rem;line-height:1}
+.step-content h3{font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:#E8D5B7;margin-bottom:0.4rem}
+.step-content p{font-size:0.88rem;color:#C8A96E;line-height:1.65;font-family:'DM Sans',sans-serif}
+
+.discovery{text-align:center;padding:5rem 2rem;max-width:780px;margin:0 auto}
+.discovery h2{margin-bottom:0.5rem}
+.discovery .sub{color:#C8A96E;font-size:0.95rem;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;font-family:'DM Sans',sans-serif}
+.discovery-ctas{display:flex;flex-direction:column;align-items:center;gap:0.75rem}
+.discovery-note{font-size:0.78rem;color:#C8A96E;font-family:'DM Sans',sans-serif}
+.discovery-note a{color:#E8A84A;border-bottom:1px solid rgba(232,168,74,0.35)}
+
+footer{border-top:1px solid rgba(107,58,42,0.25);padding:2.5rem 2rem;max-width:780px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.footer-brand{font-family:'Playfair Display',Georgia,serif;font-size:0.95rem;color:#E8D5B7}
+.footer-brand p{font-size:0.78rem;color:#C8A96E;margin-top:0.35rem;font-family:'DM Sans',sans-serif;line-height:1.6}
+.footer-links{display:flex;gap:2rem}
+.footer-col h4{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#C0392B;margin-bottom:0.6rem;font-family:'DM Sans',sans-serif}
+.footer-col a{display:block;font-size:0.8rem;color:#C8A96E;font-family:'DM Sans',sans-serif;margin-bottom:0.3rem}
+.footer-col a:hover{color:#E8D5B7}
+.footer-bottom{width:100%;border-top:1px solid rgba(107,58,42,0.2);padding-top:1.25rem;font-size:0.75rem;color:#6B3A2A;font-family:'DM Sans',sans-serif;display:flex;justify-content:space-between}
+.footer-bottom a{color:#C8A96E}
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="nav-logo" href="index.html">
+  <a href="index.html" class="nav-brand">
     <img src="ninya-logo-icon.png" alt="Ninya leaf">
-    <span class="nav-logo-text">Ninya</span>
+    Ninya
   </a>
   <ul class="nav-links">
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="consulting.html" class="active">Consulting</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
     <li><a href="index.html#pillars">Health</a></li>
     <li><a href="index.html#pillars">Building</a></li>
     <li><a href="index.html#about">About</a></li>
+    <li><a href="https://calendly.com/ryan-ninness68/30min" class="nav-cta">Book free call</a></li>
   </ul>
-  <a class="nav-cta" href="#discovery">Book free call</a>
 </nav>
 
-<div class="cons-hero">
-  <span class="eyebrow cons-hero-eyebrow">AI Consulting</span>
-  <h1 class="cons-hero-title serif">I don't advise on AI.<br>I build it <em>inside your actual tools</em> and stay in it with you until it works.</h1>
-  <p class="cons-hero-sub source">No slide decks. No theory. We sit down, find the thing eating your time, and fix it inside the software you already have open.</p>
-  <a class="btn-primary" href="#discovery">Book the free call</a>
+<div class="hero">
+  <p class="section-label">AI Consulting</p>
+  <h1>I don't advise on AI.<br>I build it <em>inside your actual tools</em> and stay in it with you until it works.</h1>
+  <p class="sub">No slide decks. No theory. We sit down, find the thing eating your time, and fix it inside the software you already have open.</p>
+  <div class="hero-ctas">
+    <a href="https://calendly.com/ryan-ninness68/30min" class="btn-primary">Book the free 15-min call</a>
+    <p class="btn-email">Or email directly: <a href="mailto:ryan@ninya.work">ryan@ninya.work</a></p>
+  </div>
 </div>
 
-<div class="cons-section" id="discovery">
-  <span class="eyebrow cons-section-label">How it works</span>
-  <h2 class="cons-section-title serif">Start with a real conversation,<br><em>not a sales pitch.</em></h2>
-  <p class="discovery-note">15-minute call. I ask what's actually slowing you down, and tell you honestly if I can fix it.</p>
+<div class="page-section">
+  <p class="section-label">How it works</p>
+  <h2>Start with a real conversation,<br><em>not a sales pitch.</em></h2>
+  <p class="section-intro">15-minute call. I ask what's actually slowing you down, and tell you honestly if I can fix it.</p>
 
-  <div class="tier-grid">
-    <div class="tier-card">
-      <span class="tier-label">Foundation</span>
-      <div class="tier-price serif">$500</div>
-      <p class="tier-desc">What's the thing eating most of your time? We sit down, figure it out, and get it set up for you together.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="card-label">Foundation</div>
+      <div class="card-name">First workflow</div>
+      <div class="card-range">$400&ndash;$600</div>
+      <p class="card-desc">What's the thing eating most of your time? We sit down, figure it out, and get it set up for you together.</p>
     </div>
-    <div class="tier-card tier-engine">
-      <span class="tier-label">Engine</span>
-      <div class="tier-price serif">$1,250</div>
-      <p class="tier-desc">A few apps actually talking to each other. Usually the next step after that first workflow — you come back, and we add another one in.</p>
+    <div class="pricing-card">
+      <div class="card-label">Engine</div>
+      <div class="card-name">Connected apps</div>
+      <div class="card-range">$1,000&ndash;$1,500</div>
+      <p class="card-desc">A few apps actually talking to each other. Usually the next step after that first workflow &mdash; you come back, and we add another one in.</p>
     </div>
-    <div class="tier-card tier-full">
-      <span class="tier-label">Full build</span>
-      <div class="tier-price serif">$2,500</div>
-      <p class="tier-desc">The whole operational mess, taken apart and rebuilt so it runs without you holding it together.</p>
+    <div class="pricing-card">
+      <div class="card-label">Full Build</div>
+      <div class="card-name">The whole mess</div>
+      <div class="card-range">$2,000&ndash;$3,000</div>
+      <p class="card-desc">The whole operational mess, taken apart and rebuilt so it runs without you holding it together.</p>
     </div>
-    <div class="tier-card tier-retainer">
-      <span class="tier-label">Retainer</span>
-      <div class="tier-price serif">$750<span>/mo</span></div>
-      <p class="tier-desc">Things break sometimes. I'm still here with you when they do.</p>
-      <p class="tier-fine">*3-month minimum, just to keep things running. After that, it's up to you.</p>
+    <div class="pricing-card featured">
+      <div class="card-label">Retainer</div>
+      <div class="card-name">Stay in it</div>
+      <div class="card-range">$700&ndash;$800/mo</div>
+      <p class="card-desc">Things break sometimes. I'm still here with you when they do. 3-month minimum &mdash; after that, it's up to you.</p>
+    </div>
+  </div>
+
+  <div class="mystery-door">
+    <h3>&#x1F6AA; Not on the list?</h3>
+    <p>We call it the Mystery Door because honestly &mdash; we don't know what you're going to bring through it either. That's kind of the point.</p>
+    <p>Brand voice, identity direction, a simple site, something else entirely &mdash; whatever it is, we'll figure out if it's a fit and what it actually costs before either of us commits to anything.</p>
+    <div class="door-ctas">
+      <a href="https://calendly.com/ryan-ninness68/30min" class="btn-door">Book a call through the Mystery Door</a>
+      <p class="door-email">or email: <a href="mailto:ryan@ninya.work">ryan@ninya.work</a></p>
     </div>
   </div>
 </div>
 
-<div class="cons-section">
-  <span class="eyebrow cons-section-label">What actually happens</span>
-  <h2 class="cons-section-title serif">Three steps.<br><em>No mystery.</em></h2>
-  <div class="how-grid">
-    <div>
-      <div class="how-num">01</div>
-      <div class="how-title">We talk it through</div>
-      <p class="how-body source">Free call. You tell me what's slowing you down. I tell you honestly whether this is something I can actually fix, or if it's not a good fit.</p>
+<div class="page-section">
+  <p class="section-label">What actually happens</p>
+  <h2>Three steps.<br><em>No mystery.</em></h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <h3>We talk it through</h3>
+        <p>Free call. You tell me what's slowing you down. I tell you honestly whether this is something I can actually fix, or if it's not a good fit.</p>
+      </div>
     </div>
-    <div>
-      <div class="how-num">02</div>
-      <div class="how-title">I build it with you watching</div>
-      <p class="how-body source">Inside the tools you already use — your calendar, your email, your spreadsheets. No new software to learn, no migration headache.</p>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <h3>I build it with you watching</h3>
+        <p>Inside the tools you already use &mdash; your calendar, your email, your spreadsheets. No new software to learn, no migration headache.</p>
+      </div>
     </div>
-    <div>
-      <div class="how-num">03</div>
-      <div class="how-title">I stay until it works</div>
-      <p class="how-body source">Not handed off and forgotten. If it breaks or needs tuning, I'm in it with you — that's what the retainer tier is actually for.</p>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <h3>I stay until it works</h3>
+        <p>Not handed off and forgotten. If it breaks or needs tuning, I'm in it with you &mdash; that's what the retainer tier is actually for.</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="cons-cta">
-  <h2 class="cta-title serif">Figure out if this<br><em>actually fits.</em></h2>
-  <p class="cta-body source">15 minutes. No pitch deck, no pressure. Just an honest conversation about what's eating your time and whether I can help.</p>
-  <a class="btn-primary" href="mailto:hello@ninya.co?subject=Free%20discovery%20call">Book the free call</a>
-  <p class="cta-note">No spam. No follow-up funnel. Just a real conversation.</p>
+<div class="discovery" id="discovery">
+  <p class="section-label">Figure out if this actually fits</p>
+  <h2>15 minutes.<br><em>No pitch deck, no pressure.</em></h2>
+  <p class="sub">Just an honest conversation about what's eating your time and whether I can help.</p>
+  <div class="discovery-ctas">
+    <a href="https://calendly.com/ryan-ninness68/30min" class="btn-primary">Book the free call</a>
+    <p class="discovery-note">Or reach out directly: <a href="mailto:ryan@ninya.work">ryan@ninya.work</a></p>
+    <p class="discovery-note">No spam. No follow-up funnel. Just a real conversation.</p>
+  </div>
 </div>
 
 <footer>
-  <div class="footer-top">
-    <div>
-      <a class="footer-logo" href="index.html">
-        <img src="ninya-logo-icon.png" alt="Ninya leaf">
-        <span class="footer-logo-text serif">Ninya</span>
-      </a>
-      <p class="footer-tagline source">Real food. Real research.<br>No blueprint required.</p>
+  <div class="footer-brand">
+    Ninya
+    <p>Real food. Real research.<br>No blueprint required.</p>
+  </div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <h4>Reading</h4>
+      <a href="blog.html">All Posts</a>
+      <a href="blog.html">Health &amp; Body</a>
+      <a href="blog.html">Building</a>
+      <a href="blog.html">Curiosity &amp; AI</a>
     </div>
-    <div>
-      <span class="footer-col-label">Reading</span>
-      <ul class="footer-links">
-        <li><a href="blog.html" class="source">All Posts</a></li>
-        <li><a href="blog.html" class="source">Health &amp; Body</a></li>
-        <li><a href="blog.html" class="source">Building</a></li>
-        <li><a href="blog.html" class="source">Curiosity &amp; AI</a></li>
-      </ul>
-    </div>
-    <div>
-      <span class="footer-col-label">Brands</span>
-      <ul class="footer-links">
-        <li><a href="https://cleangutco.netlify.app" class="source">Clean Gut Co.</a></li>
-        <li><a href="index.html#pillars" class="source">Ninya Builds</a></li>
-        <li><a href="index.html#pillars" class="source">Ninya Explores</a></li>
-        <li><a href="index.html#pillars" class="source">The Ember</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="footer-quote serif">"No Blueprint Required."<strong>Know Your Nature. Fuel Your Power.</strong></p>
+    <div class="footer-col">
+      <h4>Brands</h4>
+      <a href="https://cleangutco.com">Clean Gut Co.</a>
+      <a href="index.html#pillars">Ninya Builds</a>
+      <a href="index.html#pillars">Ninya Explores</a>
+      <a href="index.html#pillars">The Ember</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2026 Ninya &nbsp;·&nbsp; All rights reserved.</p>
-    <p class="footer-copy">hello@ninya.co</p>
+    <span>&copy; 2026 Ninya &middot; All rights reserved.</span>
+    <a href="mailto:ryan@ninya.work">ryan@ninya.work</a>
   </div>
 </footer>
+
 </body>
 </html>
