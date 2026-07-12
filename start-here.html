@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Here — Ninya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;1,400&family=Source+Serif+4:ital,wght@0,400;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Source Serif 4',Georgia,serif;background:#140D08;color:#E8D5B7;line-height:1.7}
+a{color:inherit;text-decoration:none}
+img{display:block}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 56px;height:68px;
+  background:rgba(8,13,10,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(107,58,42,.12);
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo img{width:28px;height:34px}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:21px;font-weight:900;color:#F5EFE0;letter-spacing:-.3px}
+.nav-links{display:flex;gap:40px;list-style:none}
+.nav-links a{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#7A6A58;text-decoration:none;transition:color .25s}
+.nav-links a:hover{color:#F5EFE0}
+.nav-cta{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:#D4622A;color:#F5EFE0;padding:11px 26px;border:none;cursor:pointer;text-decoration:none;transition:background .25s}
+.nav-cta:hover{background:#C0392B}
+
+.hero{padding:5rem 2rem 4rem;text-align:center;border-bottom:1px solid rgba(107,58,42,0.2);max-width:780px;margin:0 auto;padding-top:8rem}
+.section-label{font-size:0.7rem;letter-spacing:0.15em;color:#C0392B;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-bottom:1rem}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;line-height:1.2;color:#E8D5B7;margin-bottom:1.25rem;max-width:600px;margin-left:auto;margin-right:auto}
+.hero h1 em{color:#E8A84A;font-style:italic}
+.hero .sub{font-size:1.05rem;color:#C8A96E;max-width:500px;margin:0 auto 2.5rem;font-family:'DM Sans',sans-serif}
+
+.signup-box{max-width:420px;margin:0 auto}
+.signup-form{display:flex;flex-direction:column;gap:0.75rem}
+.signup-form input[type="email"]{
+  font-family:'DM Sans',sans-serif;font-size:0.95rem;color:#E8D5B7;
+  background:#241A13;border:1px solid rgba(107,58,42,0.5);border-radius:4px;
+  padding:0.85rem 1rem;width:100%;outline:none;transition:border-color .2s;
+}
+.signup-form input[type="email"]::placeholder{color:#7A6A58}
+.signup-form input[type="email"]:focus{border-color:#C0392B}
+.btn-primary{background:#C0392B;color:#F9EDE3;padding:0.85rem 2rem;border-radius:4px;font-size:0.95rem;font-family:'DM Sans',sans-serif;display:inline-block;border:none;cursor:pointer;transition:background 0.2s;width:100%}
+.btn-primary:hover{background:#A0322B}
+.btn-primary:disabled{background:#6B3A2A;cursor:not-allowed}
+.form-note{font-size:0.78rem;color:#7A6A58;font-family:'DM Sans',sans-serif;margin-top:0.25rem}
+.form-status{font-size:0.85rem;font-family:'DM Sans',sans-serif;margin-top:0.5rem;min-height:1.2em}
+.form-status.success{color:#8B9E76}
+.form-status.error{color:#C0392B}
+
+.page-section{padding:4rem 2rem;border-bottom:1px solid rgba(107,58,42,0.2);max-width:780px;margin:0 auto}
+h2{font-family:'Playfair Display',Georgia,serif;font-size:1.9rem;color:#E8D5B7;line-height:1.25;margin-bottom:0.5rem}
+h2 em{color:#E8A84A;font-style:italic}
+.section-intro{color:#C8A96E;font-size:0.9rem;font-family:'DM Sans',sans-serif;margin-top:0.75rem;line-height:1.7}
+
+.inside-grid{display:flex;flex-direction:column;gap:1.75rem;margin-top:2.5rem}
+.inside-item{display:flex;gap:1.5rem}
+.inside-num{font-family:'Playfair Display',Georgia,serif;font-size:2rem;color:rgba(192,57,43,0.3);font-style:italic;flex-shrink:0;width:2.5rem;line-height:1}
+.inside-content h3{font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:#E8D5B7;margin-bottom:0.4rem}
+.inside-content p{font-size:0.88rem;color:#C8A96E;line-height:1.65;font-family:'DM Sans',sans-serif}
+.pillar-tag{display:inline-block;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:#E8A84A;font-family:'DM Sans',sans-serif;margin-bottom:0.35rem}
+
+footer{border-top:1px solid rgba(107,58,42,0.25);padding:2.5rem 2rem;max-width:780px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.footer-brand{font-family:'Playfair Display',Georgia,serif;font-size:0.95rem;color:#E8D5B7}
+.footer-brand p{font-size:0.78rem;color:#C8A96E;margin-top:0.35rem;font-family:'DM Sans',sans-serif;line-height:1.6}
+.footer-links{display:flex;gap:2rem}
+.footer-col h4{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#C0392B;margin-bottom:0.6rem;font-family:'DM Sans',sans-serif}
+.footer-col a{display:block;font-size:0.8rem;color:#C8A96E;font-family:'DM Sans',sans-serif;margin-bottom:0.3rem}
+.footer-col a:hover{color:#E8D5B7}
+.footer-bottom{width:100%;border-top:1px solid rgba(107,58,42,0.2);padding-top:1.25rem;font-size:0.75rem;color:#6B3A2A;font-family:'DM Sans',sans-serif;display:flex;justify-content:space-between}
+.footer-bottom a{color:#C8A96E}
+
+@media(max-width:900px){
+  nav{padding:0 24px}
+  .nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="ninya-logo-icon.png" alt="Ninya">
+    <span class="nav-logo-text">Ninya</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+    <li><a href="index.html#pillars">Health</a></li>
+    <li><a href="index.html#pillars">Building</a></li>
+    <li><a href="index.html#about">About</a></li>
+  </ul>
+  <a class="nav-cta" href="https://calendly.com/ryan-ninness68/30min">Book free call</a>
+</nav>
+
+<div class="hero">
+  <p class="section-label">Free Guide</p>
+  <h1>You don't have to fit.<br><em>Start here instead.</em></h1>
+  <p class="sub">Three pieces that show you exactly who Ninya is — plus three things you can automate this week, no code required. One document, no fluff, ten minutes.</p>
+
+  <div class="signup-box">
+    <form class="signup-form" id="startHereForm">
+      <input type="email" id="emailInput" name="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn-primary" id="submitBtn">Send me the guide</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+    <p class="form-note">No spam. No pressure. Unsubscribe whenever.</p>
+  </div>
+</div>
+
+<div class="page-section">
+  <p class="section-label">What's inside</p>
+  <h2>Two sections.<br><em>One honest introduction.</em></h2>
+  <p class="section-intro">A stranger reading this should understand exactly who Ninya is and whether it's for them — faster than scrolling the site.</p>
+
+  <div class="inside-grid">
+    <div class="inside-item">
+      <div class="inside-num">01</div>
+      <div class="inside-content">
+        <span class="pillar-tag">Curiosity / AI</span>
+        <h3>I Never Stop Thinking</h3>
+        <p>What it actually feels like to build with AI as a genuine thinking partner, not a tool.</p>
+      </div>
+    </div>
+    <div class="inside-item">
+      <div class="inside-num">02</div>
+      <div class="inside-content">
+        <span class="pillar-tag">Entrepreneurship</span>
+        <h3>The Solo Founder Doesn't Have a Co-Founder. Mine Does.</h3>
+        <p>Building a business alone, except not really alone — the honest version of what that looks like day to day.</p>
+      </div>
+    </div>
+    <div class="inside-item">
+      <div class="inside-num">03</div>
+      <div class="inside-content">
+        <span class="pillar-tag">Health &amp; Body</span>
+        <h3>Walking vs. the Couch</h3>
+        <p>What 24 hours of sitting actually does to your gut — the research, and why it changed something small but real.</p>
+      </div>
+    </div>
+    <div class="inside-item">
+      <div class="inside-num">+</div>
+      <div class="inside-content">
+        <h3>3 things you can automate this week, no code</h3>
+        <p>Real, usable wins in the same document. Beginner-level, immediately actionable.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    Ninya
+    <p>Real food. Real research.<br>No blueprint required.</p>
+  </div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <h4>Reading</h4>
+      <a href="blog.html">All Posts</a>
+      <a href="blog.html">Health &amp; Body</a>
+      <a href="blog.html">Building</a>
+      <a href="blog.html">Curiosity &amp; AI</a>
+    </div>
+    <div class="footer-col">
+      <h4>Brands</h4>
+      <a href="https://cleangutco.com">Clean Gut Co.</a>
+      <a href="index.html#pillars">Ninya Builds</a>
+      <a href="index.html#pillars">Ninya Explores</a>
+      <a href="index.html#pillars">The Ember</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Ninya &middot; All rights reserved.</span>
+    <a href="mailto:ryan@ninya.work">ryan@ninya.work</a>
+  </div>
+</footer>
+
+<script>
+const form = document.getElementById('startHereForm');
+const emailInput = document.getElementById('emailInput');
+const submitBtn = document.getElementById('submitBtn');
+const statusEl = document.getElementById('formStatus');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email = emailInput.value.trim();
+  if (!email) return;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  statusEl.textContent = '';
+  statusEl.className = 'form-status';
+
+  try {
+    const res = await fetch('https://ninya-guide-signup.ryan-ninness68.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email })
+    });
+
+    if (res.ok) {
+      statusEl.textContent = "You're in — check your inbox to confirm.";
+      statusEl.className = 'form-status success';
+      form.reset();
+      submitBtn.textContent = 'Sent';
+    } else {
+      const data = await res.json().catch(function(){ return {}; });
+      statusEl.textContent = data.error || 'Something went wrong. Try again in a moment.';
+      statusEl.className = 'form-status error';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send me the guide';
+    }
+  } catch (err) {
+    statusEl.textContent = 'Could not reach the server. Check your connection and try again.';
+    statusEl.className = 'form-status error';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send me the guide';
+  }
+});
+</script>
+
+</body>
+</html>
